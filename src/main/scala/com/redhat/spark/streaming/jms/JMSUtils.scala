@@ -88,3 +88,13 @@ object JMSUtils {
     new JMSInputDStream(ssc, brokerURL, username, password, queuename, selector, storageLevel)
   }
 }
+
+private class JMSUtilsPythonHelper {
+  def createStream(
+      jssc: JavaStreamingContext,
+      brokerURL: String,
+      queuename: String,
+      storageLevel: StorageLevel): JavaReceiverInputDStream[JMSEvent] = {
+    JMSUtils.createStream(jssc, brokerURL, queuename, storageLevel)
+  }
+}
