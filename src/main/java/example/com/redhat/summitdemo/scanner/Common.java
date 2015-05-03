@@ -28,9 +28,9 @@ public class Common
     public static final  String JNDI_QUEUE_KEY_NAME                = "scannerQueue";
     /* Broker, connection factory and queue definitions */
     public static final  String BROKER_URL                         = "amqp://127.0.0.1:5672";
-    public static final  String USER                               = "guest";
-    public static final  String PASSWORD                           = "guest";
-    public static final  String QUEUE_NAME                         = "DBI-ingress";
+    public static final  String USER                               = null;
+    public static final  String PASSWORD                           = null;
+    public static final  String QUEUE_NAME                         = "default";
 
     public static ScannerReading JMSEventToScannerReading(JMSEvent jmsEvent)
     {
